@@ -26,7 +26,6 @@ def print_prime_factors (N):
      print(f"{N} = ", end = "")
      first_factor = True
      while N>1:
-        while N!=1:
             if not first_factor:
                  print(" * ", end="")
             if N%i == 0 and is_prime(i) :
@@ -36,4 +35,4 @@ def print_prime_factors (N):
             else:
                 i += 1
                 first_factor = True
-     return ""
+     print()
