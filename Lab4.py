@@ -1,9 +1,11 @@
 def fibonacci(number):
-    if number == 1:
-        return 0
-    elif number ==2:
-        return 1
-    return fibonacci(number-1)+fibonacci(number-2)
+    
+    for i in range(number):
+        if number == 1:
+            return 0
+        elif number ==2:
+            return 1
+        return fibonacci(number-1)+fibonacci(number-2)
 
 def is_prime(N):
     M = N
@@ -18,3 +20,21 @@ def is_prime(N):
             return True
     else:
          return False
+
+def print_prime_factors (N):
+     i=2
+     print(f"{N} = ", end = "")
+     first_factor = True
+     while N>1:
+        while N!=1:
+            if not first_factor:
+                 print(" * ", end=" ")
+            if N%i == 0 and is_prime(i) :
+                print(i, end="")
+                N=N//i
+                first_factor = False
+            else:
+                i += 1
+                first_factor = True
+     return ""
+print(print_prime_factors(24))
