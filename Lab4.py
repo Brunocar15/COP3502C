@@ -28,7 +28,7 @@ def print_prime_factors (N):
      while N>1:
         while N!=1:
             if not first_factor:
-                 print(" * ", end=" ")
+                 print(" * ", end="")
             if N%i == 0 and is_prime(i) :
                 print(i, end="")
                 N=N//i
