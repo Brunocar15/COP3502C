@@ -37,4 +37,3 @@ def print_prime_factors (N):
                 i += 1
                 first_factor = True
      return ""
-print(print_prime_factors(24))
